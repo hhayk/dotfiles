@@ -20,3 +20,10 @@ alias ll='ls -latr'
 alias n='nvim'
 
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+# PATH
+export PATH="$(brew --prefix rustup)/bin:$PATH"
+export PATH="/Users/hhayk/.cargo/bin:$PATH"
+
+# auto-suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
