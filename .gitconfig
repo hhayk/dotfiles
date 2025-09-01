@@ -1,0 +1,11 @@
+[user]
+  name = Hayk Hakobyan
+  email = hayk.hakobyan87@gmail.com
+[pull]
+	ff = only
+[push]
+	default = simple
+[help]
+	autocorrect = 1
+[github]
+	user = hhayk
