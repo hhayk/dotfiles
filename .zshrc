@@ -1,3 +1,5 @@
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
 # pure
 autoload -U promptinit; promptinit
 
@@ -25,5 +27,15 @@ alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 export PATH="$(brew --prefix rustup)/bin:$PATH"
 export PATH="/Users/hhayk/.cargo/bin:$PATH"
 
+export PATH="/Users/hhayk/Library/Application Support/Coursier/bin:$PATH"
+export PATH="/Users/hhayk/Library/Application Support/Coursier/bin/metals:$PATH"
+
 # auto-suggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# fzf
+source <(fzf --zsh)
