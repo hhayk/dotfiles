@@ -20,15 +20,16 @@ prompt pure
 # alias
 alias ll='ls -latr'
 alias n='nvim'
+alias z='zoxide'
 
-alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias inv='nvim $(fzf -m --preview="")'
 
 # PATH
 export PATH="$(brew --prefix rustup)/bin:$PATH"
-export PATH="/Users/hhayk/.cargo/bin:$PATH"
+export PATH="~/.cargo/bin:$PATH"
 
-export PATH="/Users/hhayk/Library/Application Support/Coursier/bin:$PATH"
-export PATH="/Users/hhayk/Library/Application Support/Coursier/bin/metals:$PATH"
+export PATH="~/Library/Application Support/Coursier/bin:$PATH"
+export PATH="~/Library/Application Support/Coursier/bin/metals:$PATH"
 
 # auto-suggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
