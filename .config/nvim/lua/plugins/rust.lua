@@ -1,13 +1,12 @@
 return {
   {
-    'mrcjkb/rustaceanvim',
-    version = '^6', -- Recommended
+    "mrcjkb/rustaceanvim",
+    version = "^6", -- Recommended
     init = function()
       -- Configure rustaceanvim here
       vim.g.rustaceanvim = {
         -- Plugin configuration
-        tools = {
-        },
+        tools = {},
         -- LSP configuration
         server = {
           on_attach = function(client, bufnr)
@@ -18,25 +17,34 @@ return {
           end,
           default_settings = {
             -- rust-analyzer language server configuration
-            ['rust-analyzer'] = {
+            ["rust-analyzer"] = {
               inlayHints = {
                 -- typeHints = { enable = true },
                 -- parameterHints = { enable = true },
                 -- Other inlay hint settings can be added here
+                typeHints = { enable = true },
+                parameterHints = { enable = true },
+                chainingHints = { enable = true },
+                closureReturnTypeHints = { enable = true },
+                lifetimeElisionHints = { enable = true },
+              },
+              completion = {
+                autoimport = {
+                  enable = true,
+                },
               },
             },
           },
         },
         -- DAP configuration
-        dap = {
-        },
+        dap = {},
       }
     end,
     lazy = false, -- This plugin is already lazy
   },
   {
-    'rust-lang/rust.vim',
-    ft = 'rust',
+    "rust-lang/rust.vim",
+    ft = "rust",
     lazy = false,
     init = function()
       vim.g.rustfmt_autosave = 1
